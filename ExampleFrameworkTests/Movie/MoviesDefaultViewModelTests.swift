@@ -1,18 +1,26 @@
 import RxSwift
+import RxTest
 import XCTest
 
 @testable import ExampleFramework
 
 final class MoviesDefaultViewModelTests: XCTestCase {
+    private var scheduler: TestScheduler!
+    private var observer: TestableObserver<MovieViewState>!
     private var disposeBag: DisposeBag!
 
     override func setUp() {
         super.setUp()
+
+        scheduler = TestScheduler(initialClock: 0)
+        observer = scheduler.createObserver(MovieViewState.self)
         disposeBag = DisposeBag()
     }
 
     override func tearDown() {
         disposeBag = nil
+        observer = nil
+        scheduler = nil
 
         super.tearDown()
     }
@@ -21,21 +29,20 @@ final class MoviesDefaultViewModelTests: XCTestCase {
         let repository = MoviesMocks.SuccessRespository()
         let viewModel = MoviesDefaultViewModel(repository: repository)
 
-        var viewStates = [MovieViewState]()
-        viewModel.observeViewState().subscribe(onNext: { viewState in
-            viewStates.append(viewState)
-        }).disposed(by: disposeBag)
+        viewModel.observeViewState().subscribe(observer).disposed(by: disposeBag)
 
         viewModel.viewDidLoad()
 
-        let expectedViewState = MovieViewState.loading
+        scheduler.start()
 
-        guard let firstViewState = viewStates.first else {
+        let expectedViewState = Recorded.next(0, MovieViewState.loading)
+
+        guard let firstViewState = observer.events.first else {
             XCTFail("Should contain at least one result")
             return
         }
 
-        XCTAssertEqual(firstViewState, expectedViewState)
+        XCTAssertEqual([firstViewState], [expectedViewState])
     }
 
     func testMoviesDefaultViewModel_cantEmitSameViewState() {
@@ -44,17 +51,18 @@ final class MoviesDefaultViewModelTests: XCTestCase {
         let repository = MoviesMocks.SuccessRespository(titles: emptyMovies)
         let viewModel = MoviesDefaultViewModel(repository: repository)
 
-        var viewStates = [MovieViewState]()
-        viewModel.observeViewState().subscribe(onNext: { viewState in
-            viewStates.append(viewState)
-        }).disposed(by: disposeBag)
+        viewModel.observeViewState().subscribe(observer).disposed(by: disposeBag)
 
         viewModel.viewDidLoad()
 
+        scheduler.start()
+
         repository.emit(new: emptyMovies)
 
-        let expectedStates = [MovieViewState.loading, MovieViewState.empty]
-        XCTAssertEqual(viewStates, expectedStates)
+        let expectedEvents = [Recorded.next(0, MovieViewState.loading),
+                              Recorded.next(0, MovieViewState.empty)]
+
+        XCTAssertEqual(observer.events, expectedEvents)
     }
 
     func testMoviesDefaultViewModel_viewStateShouldBeErrorWhenRepositoryEmitsError() {
@@ -63,17 +71,16 @@ final class MoviesDefaultViewModelTests: XCTestCase {
         let repository = MoviesMocks.FailureRepository(error: error)
         let viewModel = MoviesDefaultViewModel(repository: repository)
 
-        var viewStates = [MovieViewState]()
-        viewModel.observeViewState().subscribe(onNext: { viewState in
-            viewStates.append(viewState)
-        }).disposed(by: disposeBag)
+        viewModel.observeViewState().subscribe(observer).disposed(by: disposeBag)
 
         viewModel.viewDidLoad()
 
-        let expectedStates = [MovieViewState.loading,
-                              MovieViewState.error(error: error)]
+        scheduler.start()
 
-        XCTAssertEqual(viewStates, expectedStates)
+        let expectedEvents = [Recorded.next(0, MovieViewState.loading),
+                              Recorded.next(0, MovieViewState.error(error: error))]
+
+        XCTAssertEqual(observer.events, expectedEvents)
     }
 
     func testMoviesDefaultViewModel_viewStateShouldBeShowingMoviesWhenRepositoryEmitsMovies() {
@@ -81,14 +88,14 @@ final class MoviesDefaultViewModelTests: XCTestCase {
         let repository = MoviesMocks.SuccessRespository(titles: titles)
         let viewModel = MoviesDefaultViewModel(repository: repository)
 
-        var viewStates = [MovieViewState]()
-        viewModel.observeViewState().subscribe(onNext: { viewState in
-            viewStates.append(viewState)
-        }).disposed(by: disposeBag)
+        viewModel.observeViewState().subscribe(observer).disposed(by: disposeBag)
 
         viewModel.viewDidLoad()
 
-        let expectedStates = [MovieViewState.loading, MovieViewState.showingMovies(titles: titles)]
-        XCTAssertEqual(viewStates, expectedStates)
+        scheduler.start()
+
+        let expectedEvents = [Recorded.next(0, MovieViewState.loading),
+                              Recorded.next(0, MovieViewState.showingMovies(titles: titles))]
+        XCTAssertEqual(observer.events, expectedEvents)
     }
 }
