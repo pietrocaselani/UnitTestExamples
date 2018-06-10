@@ -36,5 +36,5 @@ public protocol MoviesViewModel {
 }
 
 public protocol MoviesView: class {
-    var viewModel: MoviesViewModel? { get set }
+//    init(viewModel: MoviesViewModel)
 }

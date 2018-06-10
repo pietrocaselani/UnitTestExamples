@@ -15,12 +15,10 @@
 		4F1F68AE20C4506700A84F08 /* MoviesDefaultViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F1F68AC20C4506700A84F08 /* MoviesDefaultViewModel.swift */; };
 		4F1F68B120C4509200A84F08 /* MoviesDefaultViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F1F68B020C4509200A84F08 /* MoviesDefaultViewModelTests.swift */; };
 		4F1F68B320C4516D00A84F08 /* MoviesMocks.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F1F68B220C4516D00A84F08 /* MoviesMocks.swift */; };
-		4F1F68B520C4694500A84F08 /* MoviesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F1F68B420C4694500A84F08 /* MoviesViewController.swift */; };
 		4F1F68B720C46A5800A84F08 /* MoviesInMemoryRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F1F68B620C46A5800A84F08 /* MoviesInMemoryRepository.swift */; };
 		4F1F68B820C46A5800A84F08 /* MoviesInMemoryRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F1F68B620C46A5800A84F08 /* MoviesInMemoryRepository.swift */; };
 		4F1F68BA20C46AA300A84F08 /* MoviesModule.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F1F68B920C46AA300A84F08 /* MoviesModule.swift */; };
 		4F88C67C20BE4186006A563F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F88C67B20BE4186006A563F /* AppDelegate.swift */; };
-		4F88C68120BE4186006A563F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4F88C67F20BE4186006A563F /* Main.storyboard */; };
 		4F88C68320BE4187006A563F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4F88C68220BE4187006A563F /* Assets.xcassets */; };
 		4F88C68620BE4187006A563F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4F88C68420BE4187006A563F /* LaunchScreen.storyboard */; };
 		4F88C69B20BE4295006A563F /* ExampleFramework.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4F88C69220BE4295006A563F /* ExampleFramework.framework */; };
@@ -28,6 +26,8 @@
 		4F88C6B220BE4425006A563F /* ExampleFramework_iOS.h in Headers */ = {isa = PBXBuildFile; fileRef = 4F88C6B020BE4425006A563F /* ExampleFramework_iOS.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		4F88C6BB20BE4519006A563F /* ExampleFramework.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4F88C6AE20BE4425006A563F /* ExampleFramework.framework */; };
 		4F88C6BC20BE4519006A563F /* ExampleFramework.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 4F88C6AE20BE4425006A563F /* ExampleFramework.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		4FC5FDF320CDA57200C07DB0 /* MoviesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FC5FDF120CDA57200C07DB0 /* MoviesViewController.swift */; };
+		4FC5FDF420CDA57200C07DB0 /* MoviesViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4FC5FDF220CDA57200C07DB0 /* MoviesViewController.xib */; };
 		6384A5BB2CC65445E9099182 /* Pods_ExampleFrameworkTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CA53D41F339D7B4B05EAFD72 /* Pods_ExampleFrameworkTests.framework */; };
 		A8C650DD8E7693B9E1FB17C1 /* Pods_TestsExample.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FF1BB70DEDA59093290A2805 /* Pods_TestsExample.framework */; };
 /* End PBXBuildFile section */
@@ -72,12 +72,10 @@
 		4F1F68AC20C4506700A84F08 /* MoviesDefaultViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoviesDefaultViewModel.swift; sourceTree = "<group>"; };
 		4F1F68B020C4509200A84F08 /* MoviesDefaultViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoviesDefaultViewModelTests.swift; sourceTree = "<group>"; };
 		4F1F68B220C4516D00A84F08 /* MoviesMocks.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoviesMocks.swift; sourceTree = "<group>"; };
-		4F1F68B420C4694500A84F08 /* MoviesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoviesViewController.swift; sourceTree = "<group>"; };
 		4F1F68B620C46A5800A84F08 /* MoviesInMemoryRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoviesInMemoryRepository.swift; sourceTree = "<group>"; };
 		4F1F68B920C46AA300A84F08 /* MoviesModule.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoviesModule.swift; sourceTree = "<group>"; };
 		4F88C67820BE4186006A563F /* TestsExample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TestsExample.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4F88C67B20BE4186006A563F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		4F88C68020BE4186006A563F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		4F88C68220BE4187006A563F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		4F88C68520BE4187006A563F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		4F88C68720BE4187006A563F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -89,6 +87,8 @@
 		4F88C6AE20BE4425006A563F /* ExampleFramework.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = ExampleFramework.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		4F88C6B020BE4425006A563F /* ExampleFramework_iOS.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ExampleFramework_iOS.h; sourceTree = "<group>"; };
 		4F88C6B120BE4425006A563F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		4FC5FDF120CDA57200C07DB0 /* MoviesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoviesViewController.swift; sourceTree = "<group>"; };
+		4FC5FDF220CDA57200C07DB0 /* MoviesViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MoviesViewController.xib; sourceTree = "<group>"; };
 		5A498BDC80B312BBDC415B7E /* Pods-ExampleFrameworkTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ExampleFrameworkTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ExampleFrameworkTests/Pods-ExampleFrameworkTests.debug.xcconfig"; sourceTree = "<group>"; };
 		82F94D2D301DB75D26D53A58 /* Pods-ExampleFrameworkTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ExampleFrameworkTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-ExampleFrameworkTests/Pods-ExampleFrameworkTests.release.xcconfig"; sourceTree = "<group>"; };
 		91D0F96F5CD94C4A3A1BBF3E /* Pods_ExampleFramework.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ExampleFramework.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -184,12 +184,12 @@
 			isa = PBXGroup;
 			children = (
 				4F88C67B20BE4186006A563F /* AppDelegate.swift */,
-				4F88C67F20BE4186006A563F /* Main.storyboard */,
 				4F88C68220BE4187006A563F /* Assets.xcassets */,
 				4F88C68420BE4187006A563F /* LaunchScreen.storyboard */,
 				4F88C68720BE4187006A563F /* Info.plist */,
-				4F1F68B420C4694500A84F08 /* MoviesViewController.swift */,
 				4F1F68B920C46AA300A84F08 /* MoviesModule.swift */,
+				4FC5FDF120CDA57200C07DB0 /* MoviesViewController.swift */,
+				4FC5FDF220CDA57200C07DB0 /* MoviesViewController.xib */,
 			);
 			path = TestsExample;
 			sourceTree = "<group>";
@@ -401,8 +401,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				4F88C68620BE4187006A563F /* LaunchScreen.storyboard in Resources */,
+				4FC5FDF420CDA57200C07DB0 /* MoviesViewController.xib in Resources */,
 				4F88C68320BE4187006A563F /* Assets.xcassets in Resources */,
-				4F88C68120BE4186006A563F /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -549,7 +549,7 @@
 			files = (
 				4F1F68BA20C46AA300A84F08 /* MoviesModule.swift in Sources */,
 				4F88C67C20BE4186006A563F /* AppDelegate.swift in Sources */,
-				4F1F68B520C4694500A84F08 /* MoviesViewController.swift in Sources */,
+				4FC5FDF320CDA57200C07DB0 /* MoviesViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -598,14 +598,6 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		4F88C67F20BE4186006A563F /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				4F88C68020BE4186006A563F /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		4F88C68420BE4187006A563F /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -740,7 +732,10 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = B5RPM7SE3L;
 				INFOPLIST_FILE = TestsExample/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = io.github.pietrocaselani.TestsExample;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
@@ -757,7 +752,10 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = B5RPM7SE3L;
 				INFOPLIST_FILE = TestsExample/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = io.github.pietrocaselani.TestsExample;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
@@ -782,7 +780,11 @@
 				FRAMEWORK_VERSION = A;
 				INFOPLIST_FILE = ExampleFramework/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@loader_path/Frameworks",
+				);
 				MACOSX_DEPLOYMENT_TARGET = 10.13;
 				PRODUCT_BUNDLE_IDENTIFIER = io.github.pietrocaselani.ExampleFramework;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
@@ -812,7 +814,11 @@
 				FRAMEWORK_VERSION = A;
 				INFOPLIST_FILE = ExampleFramework/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@loader_path/Frameworks",
+				);
 				MACOSX_DEPLOYMENT_TARGET = 10.13;
 				PRODUCT_BUNDLE_IDENTIFIER = io.github.pietrocaselani.ExampleFramework;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
@@ -834,7 +840,11 @@
 				COMBINE_HIDPI_IMAGES = YES;
 				DEVELOPMENT_TEAM = B5RPM7SE3L;
 				INFOPLIST_FILE = ExampleFrameworkTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@loader_path/../Frameworks",
+				);
 				MACOSX_DEPLOYMENT_TARGET = 10.13;
 				PRODUCT_BUNDLE_IDENTIFIER = io.github.pietrocaselani.ExampleFrameworkTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -853,7 +863,11 @@
 				COMBINE_HIDPI_IMAGES = YES;
 				DEVELOPMENT_TEAM = B5RPM7SE3L;
 				INFOPLIST_FILE = ExampleFrameworkTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@loader_path/../Frameworks",
+				);
 				MACOSX_DEPLOYMENT_TARGET = 10.13;
 				PRODUCT_BUNDLE_IDENTIFIER = io.github.pietrocaselani.ExampleFrameworkTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -876,7 +890,11 @@
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				INFOPLIST_FILE = "ExampleFramework-iOS/Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = "io.github.pietrocaselani.ExampleFramework-iOS";
 				PRODUCT_NAME = ExampleFramework;
 				SKIP_INSTALL = YES;
@@ -901,7 +919,11 @@
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				INFOPLIST_FILE = "ExampleFramework-iOS/Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = "io.github.pietrocaselani.ExampleFramework-iOS";
 				PRODUCT_NAME = ExampleFramework;
 				SKIP_INSTALL = YES;

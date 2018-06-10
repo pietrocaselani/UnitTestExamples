@@ -4,14 +4,22 @@ import UIKit
 
 final class MoviesViewController: UIViewController, MoviesView {
     private let disposeBag = DisposeBag()
-    var viewModel: MoviesViewModel?
+    private let viewModel: MoviesViewModel
+
+    @IBOutlet weak var label: UILabel!
+
+    init(viewModel: MoviesViewModel) {
+        self.viewModel = viewModel
+
+        super.init(nibName: nil, bundle: nil)
+    }
+
+    required init?(coder aDecoder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
+    }
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        guard let viewModel = self.viewModel else {
-            Swift.fatalError("View loaded without viewModel")
-        }
 
         viewModel.observeViewState()
             .observeOn(MainScheduler.instance)
@@ -25,14 +33,14 @@ final class MoviesViewController: UIViewController, MoviesView {
     private func handle(_ viewState: MovieViewState) {
         switch viewState {
         case .empty:
-            print("No movies to show")
+            label.text = "No movies to show"
         case .error(let error):
-            print("Ops... \(error.localizedDescription)")
+            label.text = "Ops... \(error.localizedDescription)"
         case .loading:
-            print("Please wait...")
+            label.text = "Please wait..."
         case .showingMovies(let titles):
             let titlesText = titles.joined(separator: "\n")
-            print("Movies: \(titlesText)")
+            label.text = "Movies: \(titlesText)"
         }
     }
 }
